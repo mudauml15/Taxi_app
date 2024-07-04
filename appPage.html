@@ -11,29 +11,78 @@
 
   </head>
   <body>
-        
+       <div class="head"><h2>Example heading <span class="badge bg-secondary ">New</span></h2>
+     </div> 
 
-    <div class="container d-grid justify-content-center mt-xl-5 "> 
-        <div class="mb-3 mt-xl-5  ">
-            <label for="validationTextarea" class="form-label">From</label>
-            <select class="form-select w-auto " required aria-label="select example">
-                <option value="">Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-    
-              <label for="validationTextarea" class="form-label mt-4">To</label>
-              <select class="form-select " required aria-label="select example">
-                  <option value="">Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-    
-                <button type="button" class="btn btn-outline-secondary mt-4">Dark</button>
+
+    <p class="p1">
+        <a class="btn btn-secondary " data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+        <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button> -->
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+                <div class="container d-grid justify-content-center mt-xl-5 "> 
+                    <div class="mb-3 mt-xl-5  ">
+                        <label for="validationTextarea" class="form-label">From</label>
+                        <select class="form-select w-auto " required aria-label="select example">
+                            <option value="">Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                
+                          <label for="validationTextarea" class="form-label mt-4">To</label>
+                          <select class="form-select " required aria-label="select example">
+                              <option value="">Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                
+                            <button type="button" class="btn btn-outline-secondary mt-4">Dark</button>
+                    </div>
+                </div>
+            </div>
+          </div>
         </div>
-    </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+                <div class="container d-grid justify-content-center mt-xl-5 "> 
+                    <div class="mb-3 mt-xl-5  ">
+                        <label for="validationTextarea" class="form-label">From</label>
+                        <select class="form-select w-auto " required aria-label="select example">
+                            <option value="">Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                
+                          <label for="validationTextarea" class="form-label mt-4">To</label>
+                          <select class="form-select " required aria-label="select example">
+                              <option value="">Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+
+                            <label for="validationText" class="form-label ">To</label>
+                            <select class="form-select " required aria-label="select example">
+                                <option value="">Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                
+                            <button type="button" class="btn btn-outline-secondary mt-4">Dark</button>
+                    </div>
+                </div>            </div>
+          </div>
+        </div>
+      </div>
 
       </body>
 
