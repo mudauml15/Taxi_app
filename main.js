@@ -75,3 +75,15 @@ function add() {
     
 }
 
+
+// deleting the index also minus the item from the index
+function del(index) {
+    if (index >= 0 && index < data.length) {
+        let deletedAmount = data[index].amount;
+        data.splice(index, 1);
+        localStorage.setItem('data', JSON.stringify(data));
+        readAll(); // Update table display after deletion
+        subtractFromTotal(deletedAmount); // Update total after deletion
+    } 
+    tot()
+}
