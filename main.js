@@ -48,3 +48,30 @@ function readAll() {
     tData.innerHTML = elements;
     
 }
+
+// function to add items 
+function add() {
+    let pointA = document.getElementById('pointA').value;
+    let pointB = document.getElementById('pointB').value;
+    let amount = Number(document.getElementById('amount').value);
+
+
+    if (pointA !== " " && pointB !== " " && amount !==  0) { 
+        let newObject = {pointA, pointB, amount };
+        data.push(newObject);
+        localStorage.setItem('data', JSON.stringify(data));
+
+        readAll();
+        tot();
+
+        document.getElementById('pointA').value = '';
+        document.getElementById('pointB').value = '';
+        document.getElementById('amount').value = '';
+
+       
+    } else {
+        alert('Please Fill in all inputs.');
+    }
+    
+}
+
