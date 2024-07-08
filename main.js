@@ -87,3 +87,16 @@ function del(index) {
     } 
     tot()
 }
+
+// function for subtract the amount from the total amount 
+function subtractFromTotal(amount) {
+    let totalDisplay = document.getElementById('display');
+    let currentTotal = Number(totalDisplay.innerHTML.replace('Your total is: ', ''));
+
+    if (!isNaN(currentTotal)) {
+        let newTotal = currentTotal - amount;
+        totalDisplay.innerHTML = "Your total is: " + newTotal.toFixed(2); 
+    } 
+
+}
+
