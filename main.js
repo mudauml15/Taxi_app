@@ -22,6 +22,12 @@ function readAll() {
     data.forEach((d, index) => {
         elements += `
             <table class="table">
+
+
+        <div class = " total">
+        <h1 id = "display"> </h1>
+         </div>
+
         <thead>
             
                 <th>From</th>

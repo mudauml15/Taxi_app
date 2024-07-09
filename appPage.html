@@ -12,22 +12,27 @@
     <div class="container">
         <h2 class="text-center">Transportation App</h2>
         <form>
+          <!-- start of labels and inputs  -->
             <div class="mb-3">
                 <label for="startPoint" class="form-label">From:</label>
                 <input type="text" class="form-control" id="pointA" name="pointA" placeholder="Enter start point destination" required>
             </div>
 
 
-
+            <!-- To part -->
             <div class="mb-3">
                 <label for="endPoint" class="form-label">To:</label>
                 <input type="text" class="form-control" id="pointB" name="pointB" placeholder="Enter end point destination"  required>
             </div>
 
+            <!-- amount part -->
+
             <div class="mb-3">
                 <label for="amount" class="form-label">Amount:</label>
                 <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter cost Fare "  required>
             </div>
+
+            <!-- end of labels and input -->
 
             <button onclick="add(),tot()" type="button" class="btn btn-primary" >Calculate Fare</button>
         </form>
