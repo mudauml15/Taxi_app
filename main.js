@@ -8,7 +8,7 @@ let data = JSON.parse(localStorage.getItem('data')) || [];
         const savedData = localStorage.getItem('data');
      
         if (savedData) {
-         this.data = JSON.parse(savedData);
+         data = JSON.parse(savedData);
         }
      
      }
@@ -63,7 +63,7 @@ function add() {
     let amount = Number(document.getElementById('amount').value);
 
 
-    if (pointA !== " " && pointB !== " " && amount !==  0) { 
+    if (pointA.trim() !==''  && pointB.trim() !== '' && amount === 0) { 
         let newObject = {pointA, pointB, amount };
         data.push(newObject);
         localStorage.setItem('data', JSON.stringify(data));
