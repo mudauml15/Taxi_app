@@ -44,7 +44,7 @@ function readAll() {
             <td>${d.amount}</td>
             <td><button onclick="del(${index})">Delete</button></td>
              <td>
-              <button onclick="edit(${index})">Edit</button>
+              <button onclick="edit(${index})" id = "add_button">Edit</button>
             </td>
           </tr>
 
@@ -101,6 +101,11 @@ function edit(index) {
     pointAInput.setAttribute('data-index', index);
     pointBInput.setAttribute('data-index', index);
     amountInput.setAttribute('data-index', index);
+
+     // Change add button to update button
+     let addButton = document.getElementById('add_button');
+     addButton.innerHTML = 'Update';
+     addButton.onclick = update;
   
   
   }
