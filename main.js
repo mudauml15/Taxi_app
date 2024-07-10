@@ -101,6 +101,12 @@ function edit(index) {
     pointAInput.setAttribute('data-index', index);
     pointBInput.setAttribute('data-index', index);
     amountInput.setAttribute('data-index', index);
+
+     // Replace add button with update button
+     let addButton = document.getElementById('addButton');
+     addButton.innerHTML = 'Update';
+     addButton.onclick = function() {
+         update(index);
   
   
   }
