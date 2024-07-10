@@ -127,6 +127,16 @@ function update(index) {
     readAll();
     tot();
 
+      // Clear form fields and reset button
+      pointAInput.value = '';
+      pointBInput.value = '';
+      amountInput.value = '';
+      let addButton = document.getElementById('addButton');
+      addButton.innerHTML = 'Add';
+      addButton.onclick = add;
+  }
+  
+
     
   
 
