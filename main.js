@@ -122,6 +122,11 @@ function update(index) {
       data[index].pointB = pointBInput.value;
       data[index].amount = Number(amountInput.value);
 
+        // Update localStorage and refresh display
+    localStorage.setItem('data', JSON.stringify(data));
+    readAll();
+    tot();
+
     
   
 
