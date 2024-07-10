@@ -34,6 +34,7 @@ function readAll() {
                 <th>To</th>
                 <th>Amount</th>
                 <th>Remove</th>
+                <th>Update</th>
         </thead>
         <tbody id="table_data">
 
@@ -42,6 +43,9 @@ function readAll() {
             <td>${d.pointB}</td>
             <td>${d.amount}</td>
             <td><button onclick="del(${index})">Delete</button></td>
+             <td>
+              <button onclick="edit(${index})">Edit</button>
+            </td>
           </tr>
 
         </tbody>
@@ -92,6 +96,14 @@ function edit(index) {
   pointAInput.value = data[index].pointA;
   pointBInput.value = data[index].pointB;
   amountInput.value = data[index].amount;
+
+    // Store the index of the item being edited
+    pointAInput.setAttribute('data-index', index);
+    pointBInput.setAttribute('data-index', index);
+    amountInput.setAttribute('data-index', index);
+  
+  
+  }
 
 
 // deleting the index also minus the item from the index
