@@ -88,6 +88,11 @@ function edit(index) {
     let pointBInput = document.getElementById('pointB');
     let amountInput = document.getElementById('amount');
 
+      // this is to fill the form fields with selected item data
+  pointAInput.value = data[index].pointA;
+  pointBInput.value = data[index].pointB;
+  amountInput.value = data[index].amount;
+
 
 // deleting the index also minus the item from the index
 function del(index) {
