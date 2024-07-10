@@ -110,6 +110,14 @@ function edit(index) {
   
   
   }
+}
+
+function update(index) {
+    let pointAInput = document.getElementById('pointA');
+    let pointBInput = document.getElementById('pointB');
+    let amountInput = document.getElementById('amount');
+
+}
 
 
 // deleting the index also minus the item from the index
