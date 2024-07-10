@@ -117,6 +117,14 @@ function update(index) {
     let pointBInput = document.getElementById('pointB');
     let amountInput = document.getElementById('amount');
 
+      // Update data at the specified index
+      data[index].pointA = pointAInput.value;
+      data[index].pointB = pointBInput.value;
+      data[index].amount = Number(amountInput.value);
+
+    
+  
+
 }
 
 
