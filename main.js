@@ -81,7 +81,7 @@ function add() {
 
        
     } else {
-        alert('Please Fill in all inputs.');
+        alert('Please fill in all missing Inputs or correct Inputs !! .');
     }
     
 }
