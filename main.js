@@ -63,7 +63,7 @@ function add() {
     let amount = Number(document.getElementById('amount').value);
 
 
-    if (pointA.trim() !==''  && pointB.trim() !== '' && amount === 0) { 
+    if (pointA.trim() !==''  && pointB.trim() !== '' && amount !== 0) { 
         let newObject = {pointA, pointB, amount };
         data.push(newObject);
         localStorage.setItem('data', JSON.stringify(data));
@@ -81,6 +81,12 @@ function add() {
     }
     
 }
+
+// function to edited items
+function edit(index) {
+    let pointAInput = document.getElementById('pointA');
+    let pointBInput = document.getElementById('pointB');
+    let amountInput = document.getElementById('amount');
 
 
 // deleting the index also minus the item from the index
