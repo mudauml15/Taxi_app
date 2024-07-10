@@ -41,7 +41,11 @@ function readAll() {
             <td>${d.pointA}</td>
             <td>${d.pointB}</td>
             <td>${d.amount}</td>
-            <td><button onclick="del(${index})">Delete</button></td>
+             <td><button onclick="del(${index})">Delete</button></td>
+             <td>
+              <button onclick="edit(${index})">Edit</button>
+            </td>
+
           </tr>
 
         </tbody>
@@ -63,7 +67,7 @@ function add() {
     let amount = Number(document.getElementById('amount').value);
 
 
-    if (pointA.trim() !==''  && pointB.trim() !== '' && amount === 0) { 
+    if (pointA.trim() !==''  && pointB.trim() !== '' && amount !== 0) { 
         let newObject = {pointA, pointB, amount };
         data.push(newObject);
         localStorage.setItem('data', JSON.stringify(data));
@@ -81,6 +85,55 @@ function add() {
     }
     
 }
+
+
+function edit(index) {
+    let pointAInput = document.getElementById('pointA');
+    let pointBInput = document.getElementById('pointB');
+    let amountInput = document.getElementById('amount');
+
+    // Fill form fields with selected item data
+    pointAInput.value = data[index].pointA;
+    pointBInput.value = data[index].pointB;
+    amountInput.value = data[index].amount;
+
+    // Store the index of the item being edited
+    pointAInput.setAttribute('data-index', index);
+    pointBInput.setAttribute('data-index', index);
+    amountInput.setAttribute('data-index', index);
+
+    // Replace add button with update button
+    let addButton = document.getElementById('addButton');
+    addButton.innerHTML = 'Update';
+    addButton.onclick = function() {
+        update(index);
+    };
+}
+
+function update(index) {
+    let pointAInput = document.getElementById('pointA');
+    let pointBInput = document.getElementById('pointB');
+    let amountInput = document.getElementById('amount');
+
+    // Update data at the specified index
+    data[index].pointA = pointAInput.value;
+    data[index].pointB = pointBInput.value;
+    data[index].amount = Number(amountInput.value);
+
+    // Update localStorage and refresh display
+    localStorage.setItem('data', JSON.stringify(data));
+    readAll();
+    tot();
+
+    // Clear form fields and reset button
+    pointAInput.value = '';
+    pointBInput.value = '';
+    amountInput.value = '';
+    let addButton = document.getElementById('addButton');
+    addButton.innerHTML = 'Add';
+    addButton.onclick = add;
+}
+
 
 
 // deleting the index also minus the item from the index
