@@ -28,12 +28,13 @@ function readAll() {
         <h1 id = "display"> </h1>
          </div>
 
-        <thead>
+        <thead class = "thead ">
             
                 <th>From</th>
                 <th>To</th>
                 <th>Amount</th>
                 <th>Remove</th>
+                <th>Update</th>
         </thead>
         <tbody id="table_data">
 
@@ -41,9 +42,9 @@ function readAll() {
             <td>${d.pointA}</td>
             <td>${d.pointB}</td>
             <td>${d.amount}</td>
-             <td><button onclick="del(${index})">Delete</button></td>
+             <td><button onclick="del(${index})" class ="deletB">Delete</button></td>
              <td>
-              <button onclick="edit(${index})">Edit</button>
+              <button onclick="edit(${index})" id = "add_button" class = "editB">Edit</button>
             </td>
 
           </tr>
@@ -172,7 +173,7 @@ function tot() {
     
     
     let totalDisplay = document.getElementById('display');
-    totalDisplay.innerHTML = "Your total is: " + totalAmount.toFixed(2);
+    totalDisplay.innerHTML = "Your total is:R" + totalAmount.toFixed(2);
 }
 
 
